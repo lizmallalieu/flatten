@@ -17,4 +17,4 @@ var flatten = function(nestedArray, result) {
 
     return result;
 
-  };
+};
