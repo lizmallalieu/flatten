@@ -6,8 +6,8 @@ var flatten = function(nestedArray, result) {
   // loop through array
   for(var i = 0; i < nestedArray.length; i++) {
     var currentItem = nestedArray[i];
-    // if current array isn't a nested array push it into the result array
-    if (!Array.isArray(currentItem)) {
+    // if current array isn't a nested array or null push it into the result array
+    if (!Array.isArray(currentItem) && currentItem !== null) {
       result.push(currentItem);
     // otherwise, call the function recursively on the nested array
     } else if(Array.isArray(currentItem)) {
