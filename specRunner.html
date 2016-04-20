@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="lib/css/mocha.css" />
     <script src="lib/chai.js"></script>
     <script src="lib/mocha.js"></script>
-
+  </head>
+  <body>
+    <div id="mocha"></div>
     <script>
       mocha.setup('bdd');
     </script>
@@ -15,18 +17,14 @@
     <script src="flatten.js"></script>
 
     <!-- Test files -->
+    <script src="spec/spec.js"></script>
+
     <script>
       window.expect = chai.expect;
       window.onload = function() {
         window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
       };
-      mocha.run();
     </script>
 
-    <script src="spec/spec.js"></script>
-
-  </head>
-  <body>
-    <div id="mocha"></div>
   </body>
 </html>
